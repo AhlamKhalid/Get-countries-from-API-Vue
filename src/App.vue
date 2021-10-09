@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <h1 class="header">
-      <a href="https://restcountries.eu/" target="_blank">Countries API</a>
+      <a href="https://restcountries.com/" target="_blank">Countries API</a>
     </h1>
     <!-- region radio -->
     <Region @change-region="changeRegion" />
@@ -25,7 +25,7 @@ export default {
   },
   data() {
     return {
-      apiUrl: "https://restcountries.eu/rest/v2/all",
+      apiUrl: "https://restcountries.com/v2/all",
       countries: [],
       isLoading: true
     };
@@ -46,9 +46,9 @@ export default {
     },
     changeRegion(region) {
       if (region === "all") {
-        this.apiUrl = "https://restcountries.eu/rest/v2/all";
+        this.apiUrl = "https://restcountries.com/v2/all";
       } else {
-        this.apiUrl = `https://restcountries.eu/rest/v2/region/${region}`;
+        this.apiUrl = `https://restcountries.com/v2/continent/${region}`;
       }
 
       this.isLoading = true;
